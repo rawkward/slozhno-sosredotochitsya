@@ -14,7 +14,8 @@
   --text-subtitle-color: #353430;
   --text-p-color: #353430;
   --accent-color: #FF8DCB;
-  --hover-color: rgb(50 49 45 / 0.40);;
+  --decor-color: #353430;
+  --hover-color: rgb(50 49 45 / 0.40);
   --bg-image: url(../images/cover-image-light.png);
   --decor: none;
   --decor-text: none;
@@ -28,7 +29,8 @@
   --text-subtitle-color: #353430;
   --text-p-color: #353430;
   --accent-color: #FF8DCB;
-  --hover-color: rgb(50 49 45 / 0.40);;
+  --decor-color: #353430;
+  --hover-color: rgb(50 49 45 / 0.40);
   --bg-image: url(../images/cover-image-light.png);
   --decor: none;
   --decor-text: none;

@@ -10,8 +10,12 @@
   margin: 0;
 }
 
+.page.theme-dark {
+  background-image: url(../images/cover-image-dark.png);
+}
+
 .header {
-  height: 100vh;
+  block-size: 100vh;
   display: grid;
   position: relative;
   color: var(--text-color);
@@ -20,30 +24,28 @@
 }
 
 .decorated-zone::before {
-  content: var(--decor);
+  content: "";
   position: absolute;
-  top: 1vh;
-  width: 25px;
-  height: 25px;
-  border-inline-end: 1px solid #FF0070;
-  border-block-start: 1px solid #FF0070;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
   justify-self: end;
 }
 
 .decorated-zone::after {
-  content: var(--decor);
+  content: "";
   position: absolute;
   top: 93vh;
-  width: 25px;
-  height: 25px;
-  border-inline-start: 1px solid #FF0070;
-  border-block-end: 1px solid #FF0070;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
   align-self: end;
 }
 
 .header__decoration {
   position: absolute;
-  top: 1vh;
   right: 10px;
   display: flex;
   gap: 10px;
@@ -55,8 +57,8 @@
 
 .header__decoration::after {
   content: var(--decor);
-  width: 9px;
-  height: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   margin-block-start: 8px;
   background-color: var(--text-color);
   border-radius: 100%;
@@ -103,7 +105,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decor-color);
 }
 
 .header__theme-menu-button:hover {
@@ -111,7 +113,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--decor-color);
   pointer-events: none;
 }
 
@@ -131,13 +133,16 @@
 
 .header__subtitle {
   display: flex;
+  block-size: fit-content;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: start;
+  justify-self: end;
+  align-self: center;
 }
 
 .header__subtitle-item {
-  width: clamp(22.188rem, 2.29vw + 21.651rem, 22.75rem);
+  inline-size: clamp(22.188rem, 2.29vw + 21.651rem, 22.75rem);
 }
 
 .title-decor {
@@ -155,28 +160,12 @@
     margin: 10px 20px 20px 0;
   }
 
-}
-
-@media (width >= 1024px) {
-
-  .header {
-    margin: 10px 20px 20px 0;
-  }
-
   .header__grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .header__theme-menu {
     grid-column: 1 / span 2;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    padding: 0;
   }
 
   .header__title {
@@ -186,4 +175,95 @@
   .header__subtitle {
     grid-column: 2;
   }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5562rem + 14.4644vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1024px) {
+
+  .header {
+    margin: 20px;
+    block-size: calc(100vh - 20px);
+  }
+
+  .header__theme-menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .header__subtitle-item {
+    inline-size: 100%;
+  }
+}
+
+.content {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 50px;
+  margin: 30px 10px;
+  font-size: 18px;
+}
+
+.content__section {
+
+}
+
+.content__heading {
+  color: var(--text-color);
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.content__heading-h3 {
+  margin-block: 20px 10px;
+}
+
+.content__article-p {
+  color: var(--text-p-color);
+  margin: 0;
+  line-height: 23.4px;
+}
+
+.content__heading-h4.title-decor {
+  font-weight: 400;
+  margin-block: 20px 10px;
+}
+
+.content__link {
+  color: var(--text-p-color);
+  text-shadow: 1px 1px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.content__link:visited {
+  color: var(--text-p-color);
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--text-p-color);
+}
+
+.content__link:hover {
+  border-block-end: 1px solid var(--text-p-color);
+}
+
+.content__section-images {
+  display: grid;
+}
+
+.content__image {
+  inline-size: 100%;
 }
