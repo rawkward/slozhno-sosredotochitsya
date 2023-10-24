@@ -157,7 +157,8 @@
 @media (width >= 768px) {
 
   .header {
-    margin: 10px 20px 20px 0;
+    margin: 20px 20px 20px 0;
+    block-size: calc(100vh - 20px);
   }
 
   .header__grid {
@@ -174,6 +175,7 @@
 
   .header__subtitle {
     grid-column: 2;
+    margin-inline-start: 20px;
   }
 
   .title {
@@ -184,7 +186,7 @@
 @media (width >= 1024px) {
 
   .header {
-    margin: 20px;
+    margin: 20px 20px 20px 0;
     block-size: calc(100vh - 20px);
   }
 
@@ -192,12 +194,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: start;
+    margin-inline-start: 20px;
   }
 
   .header__theme-menu-list {
     display: flex;
     gap: 10px;
     padding: 0;
+  }
+
+  .header__subtitle {
+    margin-inline-start: 10px;
   }
 
   .header__subtitle-item {
@@ -208,7 +215,6 @@
 .content {
   display: grid;
   grid-template-rows: repeat(4, minmax(min-content, max-content));
-  /* grid-auto-flow: row; */
   gap: 50px;
   margin: 30px 10px;
   font-size: 18px;
@@ -273,7 +279,7 @@
 @media (width >= 768px) {
 
   .content {
-    margin: 50px 20px;
+    margin: 60px 20px;
     gap: 80px;
   }
 
@@ -287,7 +293,7 @@
   }
 
   .content__section:nth-of-type(1) {
-    grid-template-columns: 236px minmax(min-content, max-content);
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(2, minmax(min-content, max-content));
   }
 
@@ -301,7 +307,7 @@
 
   .content__section:nth-of-type(2) {
     grid-template-rows: repeat(4, minmax(min-content, max-content));
-    grid-template-columns: fit-content(236px) 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header ."
       "content1 content1"
@@ -326,7 +332,7 @@
   }
 
   .content__section:nth-of-type(3) {
-    grid-template-columns: fit-content(236px) 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(6, minmax(min-content, max-content));
   }
 
@@ -381,3 +387,25 @@
     grid-area: street;
   }
 }
+
+@media (width >= 1024px) {
+
+  .content__section:nth-of-type(1) {
+    column-gap: 10px;
+  }
+
+  .content__section:nth-of-type(2) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(min-content, max-content) 1fr;
+    grid-template-areas:
+    "header . ."
+    "content1 content2 content3"
+    "content1 content2 content3";
+  }
+
+  .content__section:nth-of-type(3) {
+    column-gap: 10px;
+  }
+
+}
+
