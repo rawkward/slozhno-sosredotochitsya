@@ -1,9 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme_light {
   --text-color: #353430;
   --text-title-color: #ffc2e6;
@@ -28,6 +22,7 @@
   --bg-image: url(../images/cover-image-light.png);
   --decor: none;
   --decor-text: none;
+  background-image: var(--bg-image);
 }
 
 .theme_light .header {
