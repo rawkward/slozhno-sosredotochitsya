@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   block-size: 100vh;
   display: grid;
   position: relative;
-  color: #ff0070;
+  color: var(--text-color);
   font-size: 18px;
   margin: 10px;
 }
@@ -23,8 +23,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid #ff0070;
-  border-block-start: 1px solid #ff0070;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
   justify-self: end;
 }
 
@@ -34,8 +34,8 @@
   bottom: 20px;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid #ff0070;
-  border-block-end: 1px solid #ff0070;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
 }
 
 .header__decoration {
@@ -46,15 +46,15 @@
 }
 
 .header__decoration::before {
-  content: 'REC';
+  content: var(--decor-text);
 }
 
 .header__decoration::after {
-  content: '';
+  content: var(--decor);
   inline-size: 9px;
   block-size: 9px;
   margin-block-start: 8px;
-  background-color: #ff0070;
+  background-color: var(--text-color);
   border-radius: 100%;
   box-shadow: 0 0 4px 2px;
 }
@@ -99,15 +99,15 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid #ff0070;
+  border-block-end: 1px solid var(--decor-color);
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #ff0070;
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid #ff0070;
+  outline: 1px solid var(--decor-color);
   pointer-events: none;
 }
 
@@ -116,8 +116,8 @@
 }
 
 .title {
-  color: #db00ff;
-  text-shadow: 4px 4px 0 #ff0070;
+  color: var(--text-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
   font-family: 'IBM Plex Mono';
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
@@ -140,8 +140,8 @@
 }
 
 .title-decor {
-  background-color: #ff0070;
-  color: #000028;
+  background-color: var(--accent-color);
+  color: var(--text-subtitle-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -197,6 +197,10 @@
     padding: 0;
   }
 
+  .title {
+    text-shadow: 4px 4px 0 #ff0070;
+  }
+
   .header__subtitle {
     margin-inline-start: 10px;
   }
@@ -215,7 +219,7 @@
 }
 
 .content__heading {
-  color: #ff0070;
+  color: var(--text-color);
   margin: 0 0 20px;
   font-size: 18px;
 }
@@ -229,7 +233,7 @@
 }
 
 .content__article-p {
-  color: #f1b2ce;
+  color: var(--text-p-color);
   margin: 0;
   line-height: 23.4px;
 }
@@ -240,13 +244,13 @@
 }
 
 .content__link {
-  color: #f1b2ce;
-  text-shadow: 1px 1px 0 #ff0070;
+  color: var(--text-p-color);
+  text-shadow: 1px 1px 0 var(--accent-color);
   text-decoration: none;
 }
 
 .content__link:visited {
-  color: #f1b2ce;
+  color: var(--text-p-color);
 }
 
 .content__link:focus {
@@ -254,11 +258,11 @@
 }
 
 .content__link:focus-visible {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--text-p-color);
 }
 
 .content__link:hover {
-  border-block-end: 1px solid #f1b2ce;
+  border-block-end: 1px solid var(--text-p-color);
 }
 
 .content__section-images {
@@ -412,7 +416,7 @@
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .footer.decorated-zone::before {
@@ -440,4 +444,3 @@
     bottom: 20px;
   }
 }
-
