@@ -201,6 +201,10 @@
     padding: 0;
   }
 
+  .header__title {
+    text-shadow: 4px 4px 0 #ff0070;
+  }
+
   .header__subtitle {
     inline-size: 98%;
   }
@@ -425,5 +429,12 @@
   
   .footer.decorated-zone::after {
     bottom: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .footer__title {
+    text-shadow: 2px 2px 0 #ff0070;
   }
 }
