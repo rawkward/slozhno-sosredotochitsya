@@ -74,6 +74,10 @@
   color: var(--text-color);
 }
 
+.theme_dark .content__article-p {
+  color: var(--text-p-color);
+}
+
 .theme_dark .content__link {
   color: var(--text-p-color);
   text-shadow: 1px 1px 0 var(--decor-color);
