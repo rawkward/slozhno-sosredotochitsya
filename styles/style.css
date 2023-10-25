@@ -197,10 +197,6 @@
     padding: 0;
   }
 
-  .title {
-    text-shadow: 4px 4px 0 #ff0070;
-  }
-
   .header__subtitle {
     margin-inline-start: 10px;
   }
