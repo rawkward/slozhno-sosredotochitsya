@@ -1,10 +1,10 @@
 :root {
-  --text-color: #FF0070;
-  --text-title-color: #DB00FF;
+  --text-color: #ff0070;
+  --text-title-color: #db00FF;
   --text-subtitle-color: #000028;
-  --text-p-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --decor-color: #FF0070;
+  --text-p-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --decor-color: #ff0070;
   --hover-color: rgb(255 0 112 / 0.40);
   --bg-image: url(../images/cover-image-dark.png);
   --decor: "";
