@@ -158,7 +158,6 @@
 
   .header {
     margin: 20px 20px 20px 0;
-    block-size: calc(100vh - 20px);
   }
 
   .decorated-zone::after {
@@ -189,11 +188,6 @@
 
 @media (width >= 1024px) {
 
-  .header {
-    margin: 20px 20px 20px 0;
-    block-size: calc(100vh - 20px);
-  }
-
   .header__theme-menu {
     flex-direction: row;
     justify-content: center;
@@ -205,6 +199,10 @@
     display: flex;
     gap: 10px;
     padding: 0;
+  }
+
+  .title {
+    text-shadow: 4px 4px 0 #ff0070;
   }
 
   .header__subtitle {
