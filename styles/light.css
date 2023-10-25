@@ -18,11 +18,17 @@
 }
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
   --bg-image: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --text-title-color: #ffc2e6;
+  --text-subtitle-color: #353430;
+  --text-p-color: #353430;
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
+  --hover-color: rgb(50 49 45 / 0.4);
+  --bg-image: url(../images/cover-image-light.png);
+  --decor: none;
+  --decor-text: none;
 }
 
 .theme_light .header {
