@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.theme-dark {
+:root.theme_dark {
   --text-color: #ff0070;
   --text-title-color: #db00ff;
   --text-subtitle-color: #000028;

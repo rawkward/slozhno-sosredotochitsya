@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.theme-light {
+:root.theme_light {
   --text-color: #353430;
   --text-title-color: #ffc2e6;
   --text-subtitle-color: #353430;
