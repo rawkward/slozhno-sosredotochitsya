@@ -3,3 +3,115 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+
+:root.theme_light {
+  --text-color: #353430;
+  --text-title-color: #ffc2e6;
+  --text-subtitle-color: #353430;
+  --text-p-color: #353430;
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
+  --hover-color: rgb(50 49 45 / 0.4);
+  --bg-image: url(../images/cover-image-light.png);
+  --decor: none;
+  --decor-text: none;
+}
+
+.page.theme_light {
+  --text-color: #353430;
+  --text-title-color: #ffc2e6;
+  --text-subtitle-color: #353430;
+  --text-p-color: #353430;
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
+  --hover-color: rgb(50 49 45 / 0.4);
+  --bg-image: url(../images/cover-image-light.png);
+  --decor: none;
+  --decor-text: none;
+}
+
+.theme_light .header {
+  color: var(--text-color);
+}
+
+.theme_light .decorated-zone::before {
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+}
+
+.theme_light .decorated-zone::after {
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+}
+
+.theme_light .header__decoration::before {
+  content: var(--decor-text);
+}
+
+.theme_light .header__decoration::after {
+  content: var(--decor);
+  background-color: var(--decor-color);
+}
+
+.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--decor-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  outline: 1px solid var(--decor-color);
+}
+
+.theme_light .title {
+  color: var(--text-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.theme_light .title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-subtitle-color);
+}
+
+.theme_light .content__heading {
+  color: var(--text-color);
+}
+
+.theme_light .content__link {
+  color: var(--text-p-color);
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.theme_light .content__link:visited {
+  color: var(--text-p-color);
+}
+
+.theme_light .content__link:focus-visible {
+  outline: 1px solid var(--text-p-color);
+}
+
+.theme_light .content__link:hover {
+  border-block-end: 1px solid var(--text-p-color);
+}
+
+.theme_light .footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    --text-color: #353430;
+    --text-title-color: #ffc2e6;
+    --text-subtitle-color: #353430;
+    --text-p-color: #353430;
+    --accent-color: #ff8dcb;
+    --decor-color: #353430;
+    --hover-color: rgb(50 49 45 / 0.4);
+    --bg-image: url(../images/cover-image-light.png);
+    --decor: none;
+    --decor-text: none;
+  }
+}
