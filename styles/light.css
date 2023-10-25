@@ -18,17 +18,7 @@
 }
 
 .page.theme_light {
-  --bg-image: url(../images/cover-image-light.png);
-  --text-color: #353430;
-  --text-title-color: #ffc2e6;
-  --text-subtitle-color: #353430;
-  --text-p-color: #353430;
-  --accent-color: #ff8dcb;
-  --decor-color: #353430;
-  --hover-color: rgb(50 49 45 / 0.4);
-  --bg-image: url(../images/cover-image-light.png);
-  --decor: none;
-  --decor-text: none;
+  background-image: url(../images/cover-image-light.png);
 }
 
 .theme_light .header {
