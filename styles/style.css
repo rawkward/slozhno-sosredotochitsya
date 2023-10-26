@@ -348,27 +348,27 @@
     margin: 0;
   }
 
-  .content__section_images .content__image_sunset {
+  .content__image_sunset {
     grid-area: sunset;
   }
 
-  .content__section_images .content__image_icecream {
+  .content__image_icecream {
     grid-area: icecream;
     block-size: 100%;
     object-fit: cover;
   }
 
-  .content__section_images .content__image_tape {
+  .content__image_tape {
     grid-area: tape;
     block-size: 100%;
     object-fit: cover;
   }
 
-  .content__section_images .content__image_books {
+  .content__image_books {
     grid-area: books;
   }
 
-  .content__section_images .content__image_street {
+  .content__image_street {
     grid-area: street;
   }
 }
